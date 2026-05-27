@@ -73,6 +73,7 @@ public class TutorialMod {
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.SMIRK_BLOCK);
+            event.accept(ModBlocks.FLOWER_BLOCK);
         }
     }
 
