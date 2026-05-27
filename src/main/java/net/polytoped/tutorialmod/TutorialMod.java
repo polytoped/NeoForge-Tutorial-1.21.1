@@ -1,5 +1,6 @@
 package net.polytoped.tutorialmod;
 
+import net.polytoped.tutorialmod.block.ModBlocks;
 import net.polytoped.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -51,6 +52,7 @@ public class TutorialMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -67,6 +69,10 @@ public class TutorialMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ORANGE_CHUNKS);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SMIRK_BLOCK);
         }
     }
 
