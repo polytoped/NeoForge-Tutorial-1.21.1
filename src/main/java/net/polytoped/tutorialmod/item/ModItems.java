@@ -9,7 +9,7 @@ import net.polytoped.tutorialmod.TutorialMod;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
 
-    public static final DeferredItem<Item> PYRITE = ITEMS.register("pyrite",
+    public static final DeferredItem<Item> ORANGE_CHUNKS = ITEMS.register("orange_chunks",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
